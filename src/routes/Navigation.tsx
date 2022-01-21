@@ -7,8 +7,6 @@ import {
   Routes,
 } from 'react-router-dom';
 
-import logo from '../logo.svg';
-
 import { routes } from './routes';
 
 export const Navigation = () => {
@@ -17,7 +15,6 @@ export const Navigation = () => {
       <BrowserRouter>
         <div className="main-layout">
           <nav>
-            <img src={logo} alt="React Logo" />
             <ul>
               {routes.map(({ to, name }) => (
                 <li key={to}>
