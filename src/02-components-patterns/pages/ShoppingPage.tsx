@@ -1,8 +1,8 @@
-import ProductCard from '../components/ProductCard';
+import { ProductCard, ProductImage, ProductButtons, ProductTitle } from '../components';
 
 const product = {
   id: '1',
-  img: './coffee-mug.png',
+  // img: './coffee-mug.png',
   title: 'title1',
 };
 
@@ -16,11 +16,18 @@ const ShoppingPage = () => {
         flexDirection: 'row',
         flexWrap: 'wrap'
       }}>
-        <ProductCard product={ product }/>
-        <ProductCard product={ product }/>
-        <ProductCard product={ product }/>
-        <ProductCard product={ product }/>
-        <ProductCard product={ product }/>
+        <ProductCard product={ product }>
+          <ProductCard.Image />
+          <ProductCard.Title />
+          <ProductCard.Buttons />
+        </ProductCard>
+
+        <ProductCard product={ product }>
+          <ProductImage img={ './coffee-mug.png' }/>
+          <ProductTitle title={'new title'}/>
+          <ProductButtons />
+        </ProductCard>
+
       </div>
     </div>
   );
