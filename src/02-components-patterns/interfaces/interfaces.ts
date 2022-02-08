@@ -12,12 +12,17 @@ export interface Product {
 export interface ProductContextProps {
   counter: number;
   increaseBy: (value: number) => void;
-  product: Product
+  product: Product;
 }
 
 export interface ProductCardHOCProps {
-  ({ product, children }: ProductCardProps): JSX.Element,
-  Buttons:  ( Props: ProductButtonProps ) => JSX.Element,
-  Image:    ( Props: ProductImageProps )  => JSX.Element,
-  Title:    ( Props: ProductTitleProps )  => JSX.Element
+  ({ product, children }: ProductCardProps): JSX.Element;
+  Buttons: (Props: ProductButtonProps) => JSX.Element;
+  Image: (Props: ProductImageProps) => JSX.Element;
+  Title: (Props: ProductTitleProps) => JSX.Element;
+}
+
+export interface onChangeArgs {
+  product: Product;
+  count: number;
 }
