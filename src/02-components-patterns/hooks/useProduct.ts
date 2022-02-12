@@ -23,8 +23,6 @@ export const useProduct = ({
   const [counter, setCounter] = useState<number>(initialValues?.count || value);
   const isMounted = useRef(false);
 
-  console.log('[+] initialValues: ', initialValues);
-
   const isController = useRef(!!onChange);
 
   const increaseBy = (value: number) => {
