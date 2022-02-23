@@ -1,6 +1,14 @@
 import { lazy, LazyExoticComponent } from 'react';
+
 import NoLazy from '../01-lazyload/pages/NoLazy';
 import ShoppingPage from '../02-components-patterns/pages/ShoppingPage';
+import {
+  FormikAbstraction,
+  FormikBasicPage,
+  FormikComponent,
+  FormikYupPage,
+  RegisterPage,
+} from '../03-forms/pages/';
 
 type JSXComponent = () => JSX.Element;
 
@@ -71,5 +79,35 @@ export const routes: Route[] = [
     path: 'shopping',
     Component: ShoppingPage,
     name: 'ShoppingPage',
+  },
+  {
+    to: '/register',
+    path: 'register',
+    Component: RegisterPage,
+    name: 'Register Page',
+  },
+  {
+    to: '/formik-basic',
+    path: 'formik-basic',
+    Component: FormikBasicPage,
+    name: 'Formik Basic',
+  },
+  {
+    to: '/formik-yup',
+    path: 'formik-yup',
+    Component: FormikYupPage,
+    name: 'Formik Yup',
+  },
+  {
+    to: '/formik-component',
+    path: 'formik-component',
+    Component: FormikComponent,
+    name: 'Formik Components',
+  },
+  {
+    to: '/formik-abstraction',
+    path: 'formik-abstraction',
+    Component: FormikAbstraction,
+    name: 'Formik Abstraction',
   },
 ];
